@@ -2,7 +2,7 @@
 
 set -o vi
 
-alias ls='ls -hF'
+alias ls='ls -hAF1'
 alias openrsync='openrsync -a --rsync-path=/usr/bin/openrsync'
 alias ping='ping -c 3'
 alias pls='doas $(fc -ln -1)'
