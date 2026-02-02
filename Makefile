@@ -9,7 +9,8 @@ install: clean
 	@ln .tmux.conf ~/.tmux.conf
 
 clean:
-	@rm -f  ~/.exrc \
+	@rm -f \
+        	~/.exrc \
 		~/.gitconfig \
 		~/.config/kak/kakrc \
 		~/.kshrc \
