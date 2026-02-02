@@ -3,7 +3,7 @@
 export ENV=$HOME/.kshrc
 export FCEDIT=kak
 export HISTCONTROL=ignoredups:ignorespace
-export HISTFILE=$HOME/.sh-history
+export HISTFILE=$HOME/.ksh-history
 export HISTSIZE=8192
 export LANG=en_US.UTF-8
 export LC_ALL=C
