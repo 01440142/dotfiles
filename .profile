@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export ENV=$HOME/.shrc
+export ENV=$HOME/.kshrc
 export FCEDIT=vi
 export HISTCONTROL=ignoredups:ignorespace
 export HISTFILE=$HOME/.sh-history
