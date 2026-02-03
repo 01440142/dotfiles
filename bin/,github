@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+d=~/code/
+r='cssc dotfiles kakc knking notes scripts'
+
+mkdir -p $d
+
+for i in $r
+do
+    [ -d $d$i/ ] && break
+    git clone git@github.com:01440142/$i.git $d$i/
+done
