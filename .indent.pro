@@ -1,0 +1,7 @@
+-bad
+-i2
+-nbc
+-ncdb
+-npsl
+-nut
+-npcs
