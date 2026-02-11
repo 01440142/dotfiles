@@ -1,18 +1,23 @@
 install: clean
-	@mkdir -p ~/.config/kak/
+	@mkdir -p ~/.config/kak/colors/
+	@ln .Xresources ~/.Xresources
+	@ln .config/kak/colors/custom.kak ~/.config/kak/colors/custom.kak
+	@ln .config/kak/kakrc ~/.config/kak/kakrc
 	@ln .exrc ~/.exrc
 	@ln .gitconfig ~/.gitconfig
-	@ln .kakrc ~/.config/kak/kakrc
+	@ln .indent.pro ~/.indent.pro
 	@ln .kshrc ~/.kshrc
 	@ln .lesskey ~/.lesskey
 	@ln .profile ~/.profile
 	@ln .tmux.conf ~/.tmux.conf
 
 clean:
-	@rm -f \
-        	~/.exrc \
+	@rm -rf \
+		~/.Xresources \
+		~/.config/kak \
+		~/.exrc \
 		~/.gitconfig \
-		~/.config/kak/kakrc \
+		~/.indent.pro \
 		~/.kshrc \
 		~/.lesskey \
 		~/.profile \
