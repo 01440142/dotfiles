@@ -1,4 +1,5 @@
 [alias]
+    aa = add -A
     ci = commit
     cl = clone
     di = diff
@@ -13,5 +14,5 @@
 [push]
     autoSetupRemote = true
 [user]
-    name = 01440142
     email = 206883673+01440142@users.noreply.github.com
+    name = 01440142
