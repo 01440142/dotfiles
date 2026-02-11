@@ -1,31 +1,3 @@
-rmhl number-lines
-
-set -add global ui_options terminal_assistant=none
-set -add global ui_options terminal_enable_mouse=false
-set global modelinefmt '{{mode_info}} %val{cursor_line}:%val{cursor_char_column} {{context_info}}%val{bufname} %val{session}'
-
-map global goto 'n' '<esc>:bn<ret>' -docstring 'next buffer'
-map global goto 'p' '<esc>:bp<ret>' -docstring 'previous buffer'
-map global user '/' ':search ' -docstring 'search'
-map global user '#' ':comment-line<ret>' -docstring 'comment'
-map global user 'f' ':format<ret>' -docstring 'format'
-map global user 'p' '<a-!>tmux show-buffer<ret>' -docstring 'paste (tmux)'
-map global user 'q' ':q<ret>' -docstring 'quit'
-map global user 'w' ':wa<ret>' -docstring 'write (all)'
-map global user 'x' ':db<ret>' -docstring 'delete'
-
-def search -params 1 %{ edit %arg{1} }
-compl search shell-script-candidates %{ find . -type f }
-
-hook global InsertChar j %{try %{
-  exec -draft hH <a-k>jj<ret> d
-  exec -with-hooks <esc>
-} }
-hook global WinSetOption filetype=c %{
-    set buffer formatcmd 'clang-format -style=llvm'
-    set buffer indentwidth 2
-}
-
 # code
 face global value default
 face global type default
